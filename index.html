@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbo Antwerp – Start Early, Dance Longer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
+        
+        :root {
+            --turbo-red: #ff0033;
+            --turbo-black: #000000;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--turbo-black);
+            color: white;
+        }
+        
+        .title-font {
+            font-family: 'Bebas Neue', cursive;
+        }
+        
+        .turbo-red {
+            color: var(--turbo-red);
+        }
+        
+        .bg-turbo-red {
+            background-color: var(--turbo-red);
+        }
+        
+        .border-turbo-red {
+            border-color: var(--turbo-red);
+        }
+        
+        .glow {
+            text-shadow: 0 0 10px var(--turbo-red), 0 0 20px var(--turbo-red);
+        }
+        
+        .menu-item:hover {
+            transform: translateX(5px);
+            color: var(--turbo-red);
+        }
+        
+        .price {
+            font-family: 'Bebas Neue', cursive;
+            color: var(--turbo-red);
+        }
+        
+        .led-border {
+            border: 2px solid var(--turbo-red);
+            box-shadow: 0 0 15px var(--turbo-red);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 51, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 0, 51, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 51, 0);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="bg-black sticky top-0 z-50 led-border">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="title-font text-3xl turbo-red glow">
+                TURBO <span class="text-white">ANTWERP</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-white hover:text-red-500 transition menu-item">OVER ONS</a>
+                <a href="#hours" class="text-white hover:text-red-500 transition menu-item">OPENINGSTIJDEN</a>
+                <a href="#menu" class="text-white hover:text-red-500 transition menu-item">DRANKJES</a>
+                <a href="#location" class="text-white hover:text-red-500 transition menu-item">LOCATIE</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-black overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <video autoplay muted loop class="absolute w-full h-full object-cover">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-nightclub-with-people-dancing-1893-large.mp4" type="video/mp4">
+        </video>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="title-font text-6xl md:text-8xl mb-4 glow">
+                <span class="text-white">START</span> <span class="turbo-red">EARLY</span><br>
+                <span class="turbo-red">DANCE</span> <span class="text-white">LONGER</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">De plek waar de nacht tot leven komt</p>
+            <a href="#menu" class="bg-turbo-red text-black font-bold py-3 px-8 rounded-full text-lg hover:bg-white transition duration-300 pulse">
+                ONTDEK ONZE DRANKJES
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="title-font text-4xl md:text-5xl mb-12 text-center turbo-red glow">OVER ONS</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd81b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Turbo Antwerp Club" class="w-full h-auto rounded-lg led-border">
+                </div>
+                <div class="md:w-1/2">
+                    <p class="text-lg mb-6">
+                        Turbo Antwerp is meer dan een club; het is een beleving. Gevestigd in het hart van Antwerpen, bieden wij een unieke clubervaring voor iedereen die van dansen en goede muziek houdt.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Met een mix van opkomende en gevestigde DJ's zorgen we voor een onvergetelijke nacht. Onze locatie aan de Kaasrui 3 is gemakkelijk bereikbaar en biedt de perfecte setting voor een avond vol energie.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/turboantwerp" target="_blank" class="bg-turbo-red text-black font-bold py-2 px-6 rounded-full hover:bg-white transition duration-300 flex items-center">
+                            <i class="fab fa-instagram mr-2"></i> @turboantwerp
+                        </a>
+                        <a href="mailto:info@turboantwerp.com" class="border border-turbo-red text-white font-bold py-2 px-6 rounded-full hover:bg-turbo-red hover:text-black transition duration-300 flex items-center">
+                            <i class="fas fa-envelope mr-2"></i> Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Opening Hours -->
+    <section id="hours" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="title-font text-4xl md:text-5xl mb-12 text-center turbo-red glow">OPENINGSTIJDEN</h2>
+            <div class="max-w-md mx-auto bg-black p-8 rounded-lg led-border">
+                <div class="text-center mb-8">
+                    <h3 class="title-font text-3xl mb-2 text-white">DONDERDAG TOT ZATERDAG</h3>
+                    <p class="text-2xl turbo-red">21:00 - 05:00</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-lg mb-4">Vroeg komen? Laat blijven?</p>
+                    <p class="text-xl turbo-red">Bij Turbo Antwerp kan het allemaal!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="title-font text-4xl md:text-5xl mb-12 text-center turbo-red glow">DRANKJESMENU</h2>
+            
+            <!-- Menu Navigation -->
+            <div class="flex overflow-x-auto pb-4 mb-8 hide-scrollbar">
+                <div class="flex space-x-2">
+                    <button onclick="filterMenu('all')" class="menu-category bg-turbo-red text-black px-4 py-2 rounded-full font-bold">Alles</button>
+                    <button onclick="filterMenu('soft')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Softdrinks</button>
+                    <button onclick="filterMenu('beer')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Bier</button>
+                    <button onclick="filterMenu('vodka')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Vodka</button>
+                    <button onclick="filterMenu('shots')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Shots</button>
+                    <button onclick="filterMenu('tequila')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Tequila</button>
+                    <button onclick="filterMenu('champagne')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Champagne</button>
+                    <button onclick="filterMenu('wine')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Wijn</button>
+                    <button onclick="filterMenu('cocktails')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Cocktails</button>
+                    <button onclick="filterMenu('gin')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Gin</button>
+                    <button onclick="filterMenu('aperitifs')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Aperitifs</button>
+                    <button onclick="filterMenu('cognac')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Cognac</button>
+                    <button onclick="filterMenu('whiskey')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Whiskey</button>
+                    <button onclick="filterMenu('rum')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">Rum</button>
+                    <button onclick="filterMenu('high-rollers')" class="menu-category bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-turbo-red hover:text-black transition">High Rollers</button>
+                </div>
+            </div>
+            
+            <!-- Menu Items -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="menu-container">
+                <!-- Softdrinks -->
+                <div class="menu-item soft bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Softdrinks</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Water</span>
+                            <span class="price">€3,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Cola (Coca, Sprite, Fuzetea, Minute Maid, Fever Tree)</span>
+                            <span class="price">€3,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Fever Tree</span>
+                            <span class="price">€5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Red Bull</span>
+                            <span class="price">€5</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Beer -->
+                <div class="menu-item beer bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Bier</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Stella</span>
+                            <span class="price">€4,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Kriek</span>
+                            <span class="price">€4,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Desperados</span>
+                            <span class="price">€5,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Corona</span>
+                            <span class="price">€5,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Sol</span>
+                            <span class="price">€5,5</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Vodka -->
+                <div class="menu-item vodka bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Vodka</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Nemiroff</span>
+                            <span class="price">€8,50 / €120</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Belvedere</span>
+                            <span class="price">€11 / €160</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Belvedere Magnum</span>
+                            <span class="price">€340</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>You&Me</span>
+                            <span class="price">€235</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Shots -->
+                <div class="menu-item shots bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Shots</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Shot</span>
+                            <span class="price">€5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Turbo-shot (Vodka, Framboos en violets)</span>
+                            <span class="price">€5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Jägermeister</span>
+                            <span class="price">€5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Jägerbomb</span>
+                            <span class="price">€7,5</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tequila -->
+                <div class="menu-item tequila bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Tequila</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Rooster Rojo</span>
+                            <span class="price">€8 / €140</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Clase Azul</span>
+                            <span class="price">€26 / €390</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Don Julio 1942</span>
+                            <span class="price">€20 / €360</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Champagne -->
+                <div class="menu-item champagne bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Champagne</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Moët Brut</span>
+                            <span class="price">€120</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Moët Ice</span>
+                            <span class="price">€160</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Ruinart</span>
+                            <span class="price">€160</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Ruinart Magnum</span>
+                            <span class="price">€320</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Dom Pérignon</span>
+                            <span class="price">€420</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Wine -->
+                <div class="menu-item wine bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Wijn</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>White wine</span>
+                            <span class="price">€7 / €30</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Red wine</span>
+                            <span class="price">€7 / €30</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rosé</span>
+                            <span class="price">€7 / €30</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Cava</span>
+                            <span class="price">€7 / €30</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cocktails -->
+                <div class="menu-item cocktails bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Cocktails</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Lazy Red Cheeks</span>
+                            <span class="price">€14</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Pornstar Martini</span>
+                            <span class="price">€14</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Long Island Iced Tea</span>
+                            <span class="price">€14</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Espresso Martini</span>
+                            <span class="price">€14</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Moscow Mule</span>
+                            <span class="price">€14</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gin -->
+                <div class="menu-item gin bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Gin</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Gordon's</span>
+                            <span class="price">€8,5 / €120</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Gin Mare</span>
+                            <span class="price">€11</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Aperitifs -->
+                <div class="menu-item aperitifs bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Aperitifs</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Chartreuse</span>
+                            <span class="price">€5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Baileys</span>
+                            <span class="price">€7,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>43</span>
+                            <span class="price">€7,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Aperol Spritz</span>
+                            <span class="price">€9,5</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cognac -->
+                <div class="menu-item cognac bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Cognac</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Hennessy</span>
+                            <span class="price">€10 / €130</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>VSOP</span>
+                            <span class="price">€11</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Rémy Martin XO</span>
+                            <span class="price">€25</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Whiskey -->
+                <div class="menu-item whiskey bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Whiskey</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Busker</span>
+                            <span class="price">€8,5 / €120</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Monkey Shoulder</span>
+                            <span class="price">€9,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Highland Park 12</span>
+                            <span class="price">€12</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Highland Park 18</span>
+                            <span class="price">€20</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rum -->
+                <div class="menu-item rum bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">Rum</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Barceló</span>
+                            <span class="price">€8,5 / €120</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Appleton Signature</span>
+                            <span class="price">€9,5</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Mount Gay Black Barrel</span>
+                            <span class="price">€10</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- High Rollers -->
+                <div class="menu-item high-rollers bg-gray-900 p-6 rounded-lg led-border">
+                    <h3 class="title-font text-2xl mb-4 text-white">High Rollers</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>1,75L Don Julio</span>
+                            <span class="price">€1000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>6L Belvedere</span>
+                            <span class="price">€1250</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>3L Ruinart</span>
+                            <span class="price">€640</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>6L Veuve Clicquot Methusalem</span>
+                            <span class="price">€1950</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>9L Veuve Clicquot Brut</span>
+                            <span class="price">€2350</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="title-font text-4xl md:text-5xl mb-12 text-center turbo-red glow">LOCATIE</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <div class="h-96 w-full rounded-lg overflow-hidden led-border">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.222036405882!2d4.39701031575684!3d51.21997997958888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f7a5c5f3d3a1%3A0x1a5f1d5b3b3b3b3b!2sKaasrui%203%2C%202000%20Antwerpen!5e0!3m2!1snl!2sbe!4v1629999999999!5m2!1snl!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="title-font text-3xl mb-4 text-white">Kaasrui 3, 2000 Antwerpen</h3>
+                    <p class="text-lg mb-6">
+                        Gemakkelijk bereikbaar in het hart van Antwerpen. Kom langs en ervaar de energie van Turbo Antwerp!
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone-alt turbo-red mr-4 text-xl"></i>
+                            <span class="text-lg">+32 3 123 45 67</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope turbo-red mr-4 text-xl"></i>
+                            <span class="text-lg">info@turboantwerp.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fab fa-instagram turbo-red mr-4 text-xl"></i>
+                            <a href="https://instagram.com/turboantwerp" target="_blank" class="text-lg hover:text-turbo-red transition">@turboantwerp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="title-font text-3xl turbo-red glow">
+                        TURBO <span class="text-white">ANTWERP</span>
+                    </div>
+                    <p class="text-gray-400 mt-2">Start Early, Dance Longer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://instagram.com/turboantwerp" target="_blank" class="text-gray-400 hover:text-turbo-red transition text-2xl">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" class="text-gray-400 hover:text-turbo-red transition text-2xl">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="mailto:info@turboantwerp.com" class="text-gray-400 hover:text-turbo-red transition text-2xl">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Turbo Antwerp. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu filter functionality
+        function filterMenu(category) {
+            const menuItems = document.querySelectorAll('.menu-item');
+            
+            menuItems.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Update active button
+            const buttons = document.querySelectorAll('.menu-category');
+            buttons.forEach(button => {
+                if (button.textContent.toLowerCase() === category || 
+                    (category === 'all' && button.textContent === 'Alles')) {
+                    button.classList.remove('bg-gray-800', 'text-white');
+                    button.classList.add('bg-turbo-red', 'text-black');
+                } else {
+                    button.classList.remove('bg-turbo-red', 'text-black');
+                    button.classList.add('bg-gray-800', 'text-white');
+                }
+            });
+        }
+        
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('.hidden.md\\:flex');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('right-0');
+            nav.classList.toggle('bg-black');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('space-y-4');
+            nav.classList.toggle('space-x-8');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileNav = document.querySelector('.hidden.md\\:flex');
+                    if (mobileNav.classList.contains('flex')) {
+                        mobileNav.classList.add('hidden');
+                        mobileNav.classList.remove('flex', 'flex-col', 'absolute', 'top-16', 'left-0', 'right-0', 'bg-black', 'p-4', 'space-y-4');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
